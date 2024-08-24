@@ -37,4 +37,6 @@ sysinfo.txt
 # End of https://www.gitignore.io/api/unity 
 *.bkp
 *.vscode
-
+"Unity Essentials Project/Library/"
+"Unity Essentials Project/.vscode/"
+"Unity Essentials Project/.vs/"
