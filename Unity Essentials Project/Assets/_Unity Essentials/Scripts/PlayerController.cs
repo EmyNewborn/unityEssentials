@@ -3,9 +3,12 @@ using UnityEngine;
 // Controls player movement and rotation.
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5.0f; // Set player's movement speed.
-    public float rotationSpeed = 120.0f; // Set player's rotation speed.
-
+    [SerializeField]
+    private float speed = 5.0f; // Set player's movement speed.
+    [SerializeField]
+    private float rotationSpeed = 120.0f; // Set player's rotation speed.
+    [SerializeField]
+    private float jumpForce = 5.0f; // Set player's jump force.
     private Rigidbody rb; // Reference to player's Rigidbody.
 
     // Start is called before the first frame update
@@ -17,7 +20,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       if  (Input.GetButtonDown("Jump")) {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+       }
     }
 
 
